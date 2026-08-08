@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="7dp"
+    android:paddingBottom="10dp">
+    <LinearLayout android:id="@+id/header" android:layout_width="wrap_content" android:layout_height="32dp" android:gravity="center_vertical" android:orientation="horizontal">
+        <TextView android:id="@+id/avatar" android:layout_width="30dp" android:layout_height="30dp" android:background="@drawable/bg_dark_card" android:gravity="center" android:text="Y_" android:textColor="@color/white" android:textSize="10sp" android:textStyle="bold" />
+        <TextView android:id="@+id/author" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:textColor="@color/muted" android:textSize="11sp" android:textStyle="bold" />
+    </LinearLayout>
+    <TextView android:id="@+id/liveLog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="38dp" android:layout_marginTop="3dp" android:layout_marginBottom="3dp" android:background="@drawable/bg_live_activity" android:ellipsize="end" android:lineSpacingExtra="2dp" android:maxLines="3" android:paddingStart="11dp" android:paddingTop="7dp" android:paddingEnd="12dp" android:paddingBottom="7dp" android:textColor="#52647D" android:textSize="10sp" android:visibility="gone" />
+    <TextView android:id="@+id/content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:lineSpacingExtra="2dp" android:paddingStart="13dp" android:paddingTop="10dp" android:paddingEnd="13dp" android:paddingBottom="10dp" android:textColor="@color/text" android:textIsSelectable="true" android:textSize="13sp" />
+</LinearLayout>

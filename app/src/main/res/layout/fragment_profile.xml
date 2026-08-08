@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/page" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="20dp" android:paddingTop="20dp" android:paddingEnd="20dp" android:paddingBottom="28dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关于 Ycode" android:textColor="@color/ink" android:textSize="28sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="本地优先的开源 AI 工作伙伴" android:textColor="@color/muted" android:textSize="12sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:background="@drawable/bg_auth_hero" android:gravity="center_vertical" android:orientation="horizontal" android:padding="19dp">
+            <ImageView android:layout_width="66dp" android:layout_height="66dp" android:contentDescription="Ycode" android:src="@drawable/ic_launcher" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ycode" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" /><TextView android:id="@+id/version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Version" android:textColor="#C9D9F2" android:textSize="11sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="No account · Local data" android:textColor="#C9D9F2" android:textSize="10sp" /></LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:background="@drawable/bg_card" android:orientation="vertical" android:paddingHorizontal="16dp">
+            <TextView android:id="@+id/checkUpdate" style="@style/ProfileMenuItem" android:text="检查 GitHub 更新" />
+            <TextView android:id="@+id/updateStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="13dp" android:text="仅检查 GitHub Release，不连接其他更新服务器" android:textColor="@color/muted" android:textSize="9sp" />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:text="设置与数据" android:textColor="@color/muted" android:textSize="11sp" android:textStyle="bold" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:background="@drawable/bg_card" android:orientation="vertical" android:paddingHorizontal="16dp">
+            <TextView android:id="@+id/rules" style="@style/ProfileMenuItem" android:text="全局聊天规则" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/line" />
+            <TextView android:id="@+id/remoteConnections" style="@style/ProfileMenuItem" android:text="远程连接 · SSH / SFTP / FTP" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/line" />
+            <TextView android:id="@+id/localData" style="@style/ProfileMenuItem" android:text="本地数据与隐私说明" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card" android:lineSpacingExtra="3dp" android:padding="16dp" android:text="作者：安安\nQQ：3391649367\n\nYcode 不需要登录，不同步密钥和聊天记录。模型请求只发送到你配置的服务商；目录访问必须经过 Android 系统授权。" android:textColor="@color/muted" android:textIsSelectable="true" android:textSize="11sp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

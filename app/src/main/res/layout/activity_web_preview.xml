@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000">
+    <LinearLayout
+        android:id="@+id/previewWindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_preview_window"
+        android:clipToOutline="true"
+        android:orientation="vertical"
+        android:outlineProvider="background">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:orientation="horizontal" android:paddingHorizontal="8dp">
+            <TextView android:id="@+id/close" android:layout_width="34dp" android:layout_height="34dp" android:gravity="center" android:text="×" android:textColor="@color/text" android:textSize="21sp" />
+            <TextView android:id="@+id/entry" android:layout_width="0dp" android:layout_height="34dp" android:layout_marginStart="4dp" android:layout_weight="1" android:background="@drawable/bg_blue_pill" android:ellipsize="middle" android:gravity="center_vertical" android:maxLines="1" android:paddingHorizontal="10dp" android:text="index.html ⌄" android:textColor="@color/text" android:textSize="10sp" android:textStyle="bold" />
+            <TextView android:id="@+id/refresh" android:layout_width="40dp" android:layout_height="34dp" android:gravity="center" android:text="刷新" android:textColor="@color/blue" android:textSize="10sp" android:textStyle="bold" />
+            <TextView android:id="@+id/logsButton" android:layout_width="42dp" android:layout_height="34dp" android:gravity="center" android:text="日志" android:textColor="@color/blue" android:textSize="10sp" android:textStyle="bold" />
+            <TextView android:id="@+id/logCount" android:layout_width="18dp" android:layout_height="18dp" android:background="@drawable/bg_blue_pill" android:gravity="center" android:text="0" android:textColor="@color/blue" android:textSize="8sp" />
+            <TextView android:id="@+id/pack" android:layout_width="40dp" android:layout_height="34dp" android:gravity="center" android:text="打包" android:textColor="@color/blue" android:textSize="10sp" android:textStyle="bold" />
+            <TextView android:id="@+id/maximize" android:layout_width="40dp" android:layout_height="34dp" android:gravity="center" android:text="全屏" android:textColor="@color/blue" android:textSize="10sp" android:textStyle="bold" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/line" />
+        <WebView android:id="@+id/webView" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+        <LinearLayout android:id="@+id/logPanel" android:layout_width="match_parent" android:layout_height="150dp" android:background="#F2F5F9" android:orientation="vertical" android:padding="8dp" android:visibility="gone">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CONSOLE" android:textColor="@color/muted" android:textSize="9sp" android:textStyle="bold" />
+            <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="4dp" android:layout_weight="1">
+                <TextView android:id="@+id/logs" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/text" android:textIsSelectable="true" android:textSize="10sp" android:typeface="monospace" />
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

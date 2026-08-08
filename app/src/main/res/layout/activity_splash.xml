@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <View
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_splash_glow" />
+
+    <LinearLayout
+        android:id="@+id/brandGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:background="@drawable/bg_splash_logo_frame"
+            android:elevation="10dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Ycode"
+                android:src="@drawable/ic_launcher" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:fontFamily="sans"
+            android:letterSpacing="0.08"
+            android:text="YCODE"
+            android:textColor="#13213A"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="sans"
+            android:text="AI that works with you"
+            android:textColor="#7C8BA2"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="42dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="28dp"
+            android:layout_height="3dp"
+            android:background="@drawable/bg_splash_accent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans"
+            android:letterSpacing="0.04"
+            android:text="LOCAL · PRIVATE · CAPABLE"
+            android:textColor="#A3ADBC"
+            android:textSize="9sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>

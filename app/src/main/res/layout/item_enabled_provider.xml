@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="70dp"
+    android:background="@drawable/bg_dark_card"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp">
+    <com.ycode.app.ui.providers.ProviderIconView
+        android:id="@+id/avatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="AI 服务商图标" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content" android:ellipsize="end" android:maxLines="1" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+        <TextView android:id="@+id/models" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:ellipsize="end" android:maxLines="1" android:textColor="#96A5B9" android:textSize="9sp" />
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="●" android:textColor="#31C48D" android:textSize="10sp" />
+</LinearLayout>

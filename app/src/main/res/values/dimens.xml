@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="page_horizontal_padding">16dp</dimen>
+    <dimen name="section_horizontal_padding">20dp</dimen>
+    <dimen name="wide_page_padding">24dp</dimen>
+    <dimen name="history_drawer_width">292dp</dimen>
+    <dimen name="bottom_tab_width">292dp</dimen>
+</resources>

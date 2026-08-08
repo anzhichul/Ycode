@@ -1,0 +1,16 @@
+*.iml
+.gradle/
+.idea/
+.kotlin/
+**/build/
+local.properties
+*.jks
+*.keystore
+*.apk
+*.aab
+hs_err_pid*
+replay_pid*
+*.hprof
+*.mdmp
+.DS_Store
+Thumbs.db

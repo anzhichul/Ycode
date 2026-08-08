@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/page" android:orientation="vertical" android:padding="@dimen/wide_page_padding">
+    <TextView android:layout_width="wrap_content" android:layout_height="56dp" android:gravity="center_vertical" android:text="Y_  Ycode" android:textColor="@color/ink" android:textSize="22sp" android:textStyle="bold" />
+    <androidx.viewpager2.widget.ViewPager2 android:id="@+id/pager" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp" android:gravity="center_vertical" android:orientation="horizontal">
+        <TextView android:id="@+id/indicator" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="●  ○  ○" android:textColor="@color/blue" android:textSize="18sp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/next" android:layout_width="130dp" android:layout_height="54dp" android:text="下一步" />
+    </LinearLayout>
+</LinearLayout>

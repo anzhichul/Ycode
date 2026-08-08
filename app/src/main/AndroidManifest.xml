@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".YcodeApp"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="Ycode"
+        android:roundIcon="@drawable/ic_launcher"
+        android:resizeableActivity="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ycode"
+        android:usesCleartextTraffic="true">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+        <service
+            android:name=".service.TaskForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"
+            android:stopWithTask="false" />
+        <activity
+            android:name=".ui.crash.CrashActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":crash"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ycode" />
+        <activity android:name=".ui.workspace.WorkspaceActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.remote.RemoteConnectionsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.preview.WebPreviewActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Ycode.Preview" />
+        <activity android:name=".ui.preview.XmlPreviewActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Ycode.Preview" />
+        <activity android:name=".ui.providers.ProviderConfigActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.onboarding.OnboardingActivity" android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ycode.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

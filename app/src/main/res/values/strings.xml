@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ycode</string>
+    <string name="home">首页</string>
+    <string name="models">模型</string>
+    <string name="cloud">云端</string>
+    <string name="profile">我的</string>
+</resources>

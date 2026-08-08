@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/page" android:clipToPadding="false" android:fillViewport="true" android:paddingBottom="20dp">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="@dimen/section_horizontal_padding" android:paddingTop="14dp" android:paddingEnd="@dimen/section_horizontal_padding" android:paddingBottom="20dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="模型" android:textColor="@color/ink" android:textSize="24sp" android:textStyle="bold" />
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:text="模型服务与本地密钥" android:textColor="@color/muted" android:textSize="10sp" />
+    <EditText android:id="@+id/search" android:layout_width="match_parent" android:layout_height="42dp" android:layout_marginTop="10dp" android:background="@drawable/bg_input" android:drawableStart="@drawable/ic_search" android:drawablePadding="7dp" android:hint="搜索 AI 服务商" android:paddingHorizontal="14dp" android:singleLine="true" android:textSize="12sp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:gravity="center_vertical" android:orientation="horizontal">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="已启动" android:textColor="@color/text" android:textSize="14sp" android:textStyle="bold" />
+        <TextView android:id="@+id/enabledTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 个平台 · 0 个模型" android:textColor="@color/muted" android:textSize="10sp" />
+    </LinearLayout>
+    <HorizontalScrollView android:id="@+id/enabledScroll" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:scrollbars="none">
+        <LinearLayout android:id="@+id/enabledRow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" />
+    </HorizontalScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:gravity="center_vertical" android:orientation="horizontal">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="其他模型" android:textColor="@color/text" android:textSize="14sp" android:textStyle="bold" />
+        <TextView android:id="@+id/otherCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="26 个服务商" android:textColor="@color/muted" android:textSize="10sp" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/providers" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:clipToPadding="false" android:nestedScrollingEnabled="false" android:paddingVertical="4dp" />
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
